@@ -1,5 +1,11 @@
 <script>
   export let name;
+
+  let count = 0;
+
+  function increment() {
+    count = count + 1;
+  }
 </script>
 
 <style>
@@ -31,4 +37,6 @@
     <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
     to learn how to build Svelte apps.
   </p>
+  <h1 data-testid="count">{count}</h1>
+  <button on:click={increment}>+</button>
 </main>
